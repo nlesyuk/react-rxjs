@@ -11,20 +11,47 @@
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>React App</title>
+    <title>React/RxJS App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+      integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <section>
+      <style>
+        section {
+          margin: 16px;
+        }
+        canvas {
+          border: 1px solid grey;
+        }
+        ul {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+        }
+      </style>
+      <canvas width="400px" height="400px"></canvas>
+      <ul>
+        <li><button id="clear">clear</button></li>
+        <li>
+          <input type="range" id="range" min="1" max="20" value="4" />
+        </li>
+        <li>
+          <input type="color" id="color" value="#0000ff" />
+        </li>
+      </ul>
+    </section>
 
-    <canvas
-      width="400px"
-      height="400px"
-      style="padding: 16px; border: 1px solid grey"
-    ></canvas>
     <br />
-    <input type="test" id="search" placeholder="search" />
+    <!-- <input type="test" id="search" placeholder="search" />
     <button id="stop">stop</button>
-    <hr />
+    <hr />-->
     <div id="root"></div>
   </body>
 </html>
