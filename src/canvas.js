@@ -70,7 +70,7 @@ sizeBtn$.pipe(
   ctx.lineWidth = value;
 })
 colorBtn$.pipe(
-  map(e => Number(e.target.value)),
+  map(e => e.target.value),
   tap(v => console.log('Tap color', v))
 ).subscribe((value) => {
   ctx.strokeStyle = value;
